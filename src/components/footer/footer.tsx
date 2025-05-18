@@ -7,7 +7,7 @@ export const Footer = () => {
       <Container style={{justifySelf:"center",alignSelf:"center",position:"relative"}}>
         <Row className="align-items-center">
           <Col size={12} sm={6}>
-            <img src={logo} alt="Logo" style={{filter:"invert(1)"}}/>
+            <a href="portfolio"><img src={logo} alt="Logo" style={{filter:"invert(1)"}}/></a>
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
