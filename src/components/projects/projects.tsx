@@ -4,6 +4,7 @@ import appImg1 from "../../assets/img/todo.png";
 import appImg2 from "../../assets/img/alpha.png";
 import appImg3 from "../../assets/img/weather.png";
 import websiteImg1 from "../../assets/img/movibes.png"
+import websiteImg2 from "../../assets/img/store.png"
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -40,6 +41,14 @@ export const Projects = () => {
       imgUrl: websiteImg1,
       githubUrl:"https://github.com/KerlosGirgis/Movibes",
       websiteUrl:"https://kerlosgirgis.github.io/Movibes/movies"
+    },
+    {
+      title: "Store",
+      description:
+        "E-commerce website with modern UI",
+      imgUrl: websiteImg2,
+      githubUrl:"https://github.com/KerlosGirgis/Store",
+      websiteUrl:"https://kerlosgirgis.github.io/store/"
     },
   ];
 
