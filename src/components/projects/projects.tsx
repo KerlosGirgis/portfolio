@@ -3,6 +3,7 @@ import { ProjectCard } from "../projectCard/projectCard";
 import appImg1 from "../../assets/img/todo.png";
 import appImg2 from "../../assets/img/alpha.png";
 import appImg3 from "../../assets/img/weather.png";
+import appImg4 from "../../assets/img/shoppy.png";
 import websiteImg1 from "../../assets/img/movibes.png"
 import websiteImg2 from "../../assets/img/store.png"
 import "animate.css";
@@ -15,40 +16,46 @@ export const Projects = () => {
       description:
         "Offline, secure, To-Do and Notes app with encrypted storage",
       imgUrl: appImg1,
-      githubUrl:"https://github.com/KerlosGirgis/Todo",
-      fdroidUrl:"https://f-droid.org/en/packages/com.k.todo/"
+      githubUrl: "https://github.com/KerlosGirgis/Todo",
+      fdroidUrl: "https://f-droid.org/en/packages/com.k.todo/"
     },
     {
       title: "Alpha",
       description: "Simple Bookstore Application",
       imgUrl: appImg2,
-      githubUrl:"https://github.com/KerlosGirgis/alpha"
+      githubUrl: "https://github.com/KerlosGirgis/alpha"
     },
     {
       title: "Weather",
       description: "Simple Weather Forcast App",
       imgUrl: appImg3,
-      githubUrl:"https://github.com/KerlosGirgis/Weather"
+      githubUrl: "https://github.com/KerlosGirgis/Weather"
+    },
+        {
+      title: "Shoppy",
+      description: "Flutter-based e-commerce app",
+      imgUrl: appImg4,
+      githubUrl: "https://github.com/KerlosGirgis/Shoppy"
     },
   ];
 
 
-    const websites = [
+  const websites = [
     {
       title: "Movibes",
       description:
         "Movibes is a sleek and modern movie browsing website",
       imgUrl: websiteImg1,
-      githubUrl:"https://github.com/KerlosGirgis/Movibes",
-      websiteUrl:"https://kerlosgirgis.github.io/Movibes/movies"
+      githubUrl: "https://github.com/KerlosGirgis/Movibes",
+      websiteUrl: "https://kerlosgirgis.github.io/Movibes/movies"
     },
     {
       title: "Store",
       description:
         "E-commerce website with modern UI",
       imgUrl: websiteImg2,
-      githubUrl:"https://github.com/KerlosGirgis/Store",
-      websiteUrl:"https://kerlosgirgis.github.io/store/"
+      githubUrl: "https://github.com/KerlosGirgis/Store",
+      websiteUrl: "https://kerlosgirgis.github.io/store/"
     },
   ];
 
@@ -58,11 +65,7 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <TrackVisibility>
-              {({ isVisible }) => (
                 <div
-                  className={
-                    isVisible ? "animate__animated animate__fadeIn" : ""
-                  }
                 >
                   <h2>Projects</h2>
                   <p>Things I've built so far</p>
@@ -81,9 +84,6 @@ export const Projects = () => {
                     </Nav>
                     <Tab.Content
                       id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
@@ -95,9 +95,6 @@ export const Projects = () => {
                     </Tab.Content>
                     <Tab.Content
                       id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
                     >
                       <Tab.Pane eventKey="second">
                         <Row>
@@ -109,7 +106,6 @@ export const Projects = () => {
                     </Tab.Content>
                   </Tab.Container>
                 </div>
-              )}
             </TrackVisibility>
           </Col>
         </Row>

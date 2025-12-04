@@ -24,11 +24,11 @@ export const Skills = () => {
   };
 
   return (
-    <section className="skill" id="skills">
+    <section className="skill">
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className="skill-bx wow zoomIn">
+            <div className="skill-bx wow zoomIn" id="skills">
               <h2>Tech Stack</h2>
               <p>Technologies I've been working with recently</p>
               <Carousel

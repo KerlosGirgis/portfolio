@@ -83,7 +83,7 @@ export const NavBar = () => {
                   <i className="bi bi-whatsapp link-light"></i>
                 </a>
               </div>
-              <Link to={"https://drive.google.com/file/d/1naU3bSZewF7kvAuDzi0wKHhr7n7m2cZ_/view?usp=sharing"}>
+              <Link to={"https://drive.google.com/file/d/1QMVk6k27WGlatZsWjDGi4FegFKzZpiu1/view?usp=drive_link"}>
                 <button className="vvd">
                   <span>Resume</span>
                 </button>
