@@ -1,8 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../../assets/img/header-image.png";
+import headerImg from "../../assets/img/me.jpg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+
+const toRotate = ["Web Developer", "Mobile App Developer"];
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -10,20 +12,9 @@ export const Banner = () => {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [, setIndex] = useState(1);
-  const toRotate = ["Web Developer", "Mobile App Developer"];
   const period = 2000;
 
-  useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
-  const tick = () => {
+  const tick = useCallback(() => {
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
     const updatedText = isDeleting
@@ -48,7 +39,17 @@ export const Banner = () => {
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
-  };
+  }, [isDeleting, loopNum, text]);
+
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [tick, delta]);
 
   return (
     <section className="banner" id="home">
@@ -79,10 +80,10 @@ export const Banner = () => {
               {({ isVisible }) => (
                 <div
                   className={
-                    isVisible ? "animate__animated animate__zoomIn" : ""
+                    isVisible ? "animate__animated animate__zoomIn banner-img-wrapper" : "banner-img-wrapper"
                   }
                 >
-                  <img src={headerImg} alt="Header Img" />
+                  <img className="banner-img" src={headerImg} alt="Header Img" />
                 </div>
               )}
             </TrackVisibility>

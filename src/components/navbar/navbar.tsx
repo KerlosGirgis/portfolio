@@ -79,7 +79,11 @@ export const NavBar = () => {
                 <a href="mailto:Kerlos.girgis1@gmail.com">
                   <i className="bi bi-envelope-fill link-light"></i>
                 </a>
-                <a href="tel:01121112362">
+                <a
+                  href="https://wa.me/201121112362?text=Hello%20Kerlos%2C%20I%20would%20like%20to%20connect%20with%20you!"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="bi bi-whatsapp link-light"></i>
                 </a>
               </div>

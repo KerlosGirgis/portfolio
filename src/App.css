@@ -286,19 +286,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
-  animation: updown 3s linear infinite;
+.banner-img-wrapper {
+  width: min(320px, 90vw);
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(170,54,124,0.12));
+  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  display: grid;
+  place-items: center;
 }
-@keyframes updown {
-    0% {
-        transform: translateY(-20px);
-    }
-    50% {
-        transform: translateY(20px);
-    }
-    100% {
-        transform: translateY(-20px);
-    }
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
